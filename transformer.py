@@ -9,4 +9,11 @@ class Transformer:
     def __init__(self):
         pass
 
+    def forward_pass(self):
+        pass
 
+    def encoder(self):
+        pass
+
+    def transformer(self):
+        pass
