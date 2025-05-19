@@ -13,7 +13,4 @@ class Transformer:
         pass
 
     def encoder(self):
-        pass
-
-    def transformer(self):
-        pass
+        pass 
