@@ -6,6 +6,7 @@ import torch.optim as optim
 import math 
 import copy
 
+# Create a class for the multihead attension layer
 class MultiheadAttention(nn.model):
     def __init__(self, d_model, num_heads):
         super(MultiheadAttention, self).__init__()
@@ -31,6 +32,9 @@ class MultiheadAttention(nn.model):
     def split_heads(self, x):
         batch_size, seq_length, d_model = x.size()
         return x.view(batch_size, seq_length, self.num_heads, self.d_k).transpose(1, 2)
+
+    def autoencoder():
+        pass
 
 
 
