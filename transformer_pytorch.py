@@ -33,8 +33,3 @@ class MultiheadAttention(nn.model):
         batch_size, seq_length, d_model = x.size()
         return x.view(batch_size, seq_length, self.num_heads, self.d_k).transpose(1, 2)
 
-    def autoencoder():
-        pass
-
-
-
