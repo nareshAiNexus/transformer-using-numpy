@@ -33,3 +33,9 @@ class MultiheadAttention(nn.model):
         batch_size, seq_length, d_model = x.size()
         return x.view(batch_size, seq_length, self.num_heads, self.d_k).transpose(1, 2)
 
+    def combine_heads(self, x):
+        batch_size, _, seq_length, d_k = x.size()
+        return x.transpose(1, 2).contiguous().view(batch_size, seq_length, self.d_model)
+
+    def forward(self, Q, K, V, mask=None):
+        pass
